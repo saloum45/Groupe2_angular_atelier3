@@ -1,0 +1,70 @@
+<div class="formContainer">
+  <div class="image">
+<img src="https://demo.bootstrapdash.com/login-template-free-2/assets/images/login.jpg" alt="">
+  </div>
+  <div class="formulaire ">
+    <!-- <h3><i class="bi bi-hourglass-top"></i>Logo</h3> -->
+    <div class="logoiamge mt-4">
+      <img src="https://demo.bootstrapdash.com/login-template-free-2/assets/images/logo.svg" alt="">
+    </div>
+
+    <!-- logginfrom -->
+    <div class="logginfrom " *ngIf="formChoice">
+
+      <p class="mt-4">Sign into your account</p>
+
+      <div class="mb-3 col-7">
+        <input type="email" class="form-control" id="email" placeholder="Saisir l'email" [(ngModel)]="email">
+      </div>
+      <div class="mb-3 col-7">
+        <input type="password" class="form-control" id="pass" placeholder="***********" [(ngModel)]="pass">
+      </div>
+      <!-- login -->
+      <button class="btn col-7 bg-black text-white" (click)="verifierLogin()">
+        Login
+      </button>
+      <div class="mt-5">
+
+        <a href="#" class="text-secondary text-decoration-none"> Forget password</a>
+        <p class="forget" (click)="showForm()" >Don't have an account?Resgistter here</p>
+      </div>
+      <p class="text-secondary team fw-medium ">team of use Privacy policy</p>
+
+    </div>
+
+
+    <!-- Registerfrom -->
+    <div class="Registerfrom " *ngIf="!formChoice" >
+
+      <p class="mt-4">Create Account</p>
+
+      <div class="mb-3 col-7">
+        <input type="text" class="form-control" id="nom" placeholder="Saisir le nom" [(ngModel)]="nom">
+      </div>
+      <div class="mb-3 col-7">
+        <input type="text" class="form-control" id="prenom" placeholder="Saisir le prenom" [(ngModel)]="prenom">
+      </div>
+      <div class="mb-3 col-7">
+        <input type="text" class="form-control" id="numero" placeholder="Saisir le numero" [(ngModel)]="numero">
+      </div>
+      <div class="mb-3 col-7">
+        <input type="email" class="form-control" id="email" placeholder="Saisir l'email" [(ngModel)]="email">
+      </div>
+      <div class="mb-3 col-7">
+        <input type="password" class="form-control" id="pass" placeholder="***********" [(ngModel)]="pass">
+      </div>
+      <!-- login -->
+      <button class="btn col-7 bg-black text-white" (click)="verifierRegister()" >
+        Register
+      </button>
+      <p class="text-secondary team fw-medium ">team of use Privacy policy</p>
+    </div>
+
+
+
+
+    <!-- <div class="mt-5"> -->
+    <!-- </div> -->
+
+  </div>
+</div>
